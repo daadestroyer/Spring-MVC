@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@page isELIgnored="false"%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,7 +20,8 @@
 <body>
 	<div class="container mt-5">
 		<center>
-			<h1>Registration Form</h1>
+			<h1>${Header}</h1>
+			<p><h5>${Desc }</h5></p>
 		</center>
 		<form action="register" method="post">
 			<div class="form-group">
@@ -35,7 +37,8 @@
 			<div class="form-group">
 				<label for="userPassword"><h6>User Password</h6></label> <input
 					type="password" class="form-control" id="userPassword"
-					aria-describedby="emailHelp" placeholder="User Password" name="upswd">
+					aria-describedby="emailHelp" placeholder="User Password"
+					name="upswd">
 			</div>
 			<div class="container text-center">
 				<button type="submit" class="btn btn-success">Sign Up</button>
