@@ -1,4 +1,4 @@
-package Controller;
+package springmvc.controller;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/online.daadestroyer.com")
 public class HomeController {
 
 	@RequestMapping( path="/home" , method = RequestMethod.GET )

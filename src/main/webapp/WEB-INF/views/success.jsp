@@ -13,7 +13,7 @@
 		<p>
 		<h3>${Desc }</h3>
 		</p>
-
+		<h1 style="color:green;">${msg}</h1>
 		<h1>Welcome , ${user.uname}</h1>
 		<h2>
 			Your <span style="color: red;">email </span> is ${user.uemail} and <span

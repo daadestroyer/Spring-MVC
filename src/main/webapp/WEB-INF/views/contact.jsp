@@ -38,7 +38,7 @@
 				<label for="userPassword"><h6>User Password</h6></label> <input
 					type="password" class="form-control" id="userPassword"
 					aria-describedby="emailHelp" placeholder="User Password"
-					name="upswd">
+					name="upassword">
 			</div>
 			<div class="container text-center">
 				<button type="submit" class="btn btn-success">Sign Up</button>

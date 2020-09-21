@@ -1,17 +1,22 @@
-package Controller;
+package springmvc.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import Model.User;
+import springmvc.model.User;
+import springmvc.service.UserService;
 
 @Controller
-@RequestMapping("/online.daadestroyer.com")
 public class ContactController {
 
+	@Autowired
+	private UserService userService;
+	
+	
 	// This thing will call automatically before all others handlers
 	@ModelAttribute
 	public void commonData(Model model) {
@@ -25,7 +30,10 @@ public class ContactController {
 
 	// Getting Data from View to Controller using @ModelAttriute Annotation
 	@RequestMapping(path = "/register", method = RequestMethod.POST)
-	public String register(@ModelAttribute User user , Model model) {
+	public String register(@ModelAttribute User user , Model model ) {
+		System.out.println(user);
+		int createUser = this.userService.createUser(user);
+		model.addAttribute("msg", "User Created with Id :"+createUser);
 		return "success";
 	} 
 	
