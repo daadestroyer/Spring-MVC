@@ -32,6 +32,9 @@ public class ContactController {
 	@RequestMapping(path = "/register", method = RequestMethod.POST)
 	public String register(@ModelAttribute User user , Model model ) {
 		System.out.println(user);
+		if(user.getUemail()=="") {
+			return "redirect:/contact";
+		}
 		int createUser = this.userService.createUser(user);
 		model.addAttribute("msg", "User Created with Id :"+createUser);
 		return "success";
